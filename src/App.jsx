@@ -5,12 +5,7 @@ function App() {
   useEffect(() => {
     const fetchMinistries = async () => {
       try {
-        const response = await fetch("/books", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          }
-        });
+        const response = await fetch("/books");
 
         if (!response.ok) {
           throw new Error(`API error: ${response.statusText}`);
@@ -22,7 +17,7 @@ function App() {
       } catch (error) {
         console.log("Error happened", error);
       }
-    };
+    }
 
     fetchMinistries();
   }, []);
