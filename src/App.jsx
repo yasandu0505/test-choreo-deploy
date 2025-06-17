@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
 function App() {
-  const baseURL = import.meta.env.VITE_API_PROXY_TARGET || "http://localhost:8080";
+  // const baseURL = import.meta.env.VITE_API_PROXY_TARGET || "http://localhost:8080";
 
   useEffect(() => {
     const fetchMinistries = async () => {
       try {
-        const response = await fetch(`${baseURL}/v1/entities/2153-12_min_1/relations`, {
+        const response = await fetch("/v1/entities/2153-12_min_1/relations", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
