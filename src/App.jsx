@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 function App() {
-  // const baseURL = import.meta.env.VITE_API_PROXY_TARGET || "http://localhost:8080";
 
   useEffect(() => {
     const fetchMinistries = async () => {
