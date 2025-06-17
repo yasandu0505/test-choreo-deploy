@@ -9,15 +9,15 @@ export default defineConfig(({ mode }) => {
   return {
     base: '/',
     plugins: [react()],
-    server: {
-      proxy: {
-        '/v1': {
-          target: env.VITE_API_PROXY_TARGET || 'http://localhost:8080',
-          changeOrigin: true,
-          secure: false,
-          rewrite: (path) => path.replace(/^\/v1/, '/v1'),
-        }
-      }
-    }
+    // server: {
+    //   proxy: {
+    //     '/v1': {
+    //       target: env.VITE_API_PROXY_TARGET || 'http://localhost:8080',
+    //       changeOrigin: true,
+    //       secure: false,
+    //       rewrite: (path) => path.replace(/^\/v1/, '/v1'),
+    //     }
+    //   }
+    // }
   }
 })
