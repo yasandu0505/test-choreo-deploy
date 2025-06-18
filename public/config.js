@@ -1,4 +1,4 @@
 // public/config.js
-window.config = {
-  choreoApiUrl: "/choreo-apis/orgchart2/go-rest/v1",
+window.configs = {
+  apiUrl: '/choreo-apis/orgchart2/go-rest/v1',
 };

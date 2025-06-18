@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function App() {
 
   useEffect(() => {
     // Safely access window.config *after* script is loaded
-    const configUrl = window?.config?.choreoApiUrl || "/hihihiihihihi";
+    const apiUrl = window?.configs?.apiUrl ? window.configs.apiUrl : "/";
 
     const fetchMinistries = async () => {
       try {
-        const response = await fetch(`${configUrl}/books`);
+        const response = await fetch(`${apiUrl}/books`);
 
         if (!response.ok) {
           throw new Error(`API error: ${response.statusText}`);
